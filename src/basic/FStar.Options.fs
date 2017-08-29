@@ -478,8 +478,8 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
       ( noshort,
         "admit_except",
-        SimpleStr "[id]",
-        "Admit all verification conditions, except those with query label <id> (eg, --admit_except '(FStar.Fin.pigeonhole, 1)'");
+        SimpleStr "(symbol, id)",
+        "Admit all verification conditions, except those with query label (<symbol>, <id>)) (e.g. --admit_except '(FStar.Fin.pigeonhole, 1)'");
 
       ( noshort,
         "cache_checked_modules",
@@ -498,7 +498,7 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
       ( noshort,
         "debug",
-        Accumulated (SimpleStr "module name"),
+        Accumulated (SimpleStr "module_name"),
         "Print lots of debugging information while checking module");
 
        ( noshort,
@@ -530,7 +530,7 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "dump_module",
-        Accumulated (SimpleStr "module name"),
+        Accumulated (SimpleStr "module_name"),
         "");
 
        ( noshort,
@@ -550,7 +550,7 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "extract_module",
-        Accumulated (PostProcessed (pp_lowercase, (SimpleStr "module name"))),
+        Accumulated (PostProcessed (pp_lowercase, (SimpleStr "module_name"))),
         "Only extract the specified modules (instead of the possibly-partial dependency graph)");
 
        ( noshort,
@@ -655,7 +655,7 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "n_cores",
-        IntStr "[positive integer]", //; detail_errors := false),
+        IntStr "positive_integer", //; detail_errors := false),
         "Maximum number of cores to use for the solver (implies detail_errors = false) (default 1)");
 
        ( noshort,
@@ -730,12 +730,12 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "reuse_hint_for",
-        SimpleStr "top-level name in the current module",
-        "Optimistically, attempt using the recorded hint for 'f' when trying to verify some other term 'g'");
+        SimpleStr "toplevel_name",
+        "Optimistically, attempt using the recorded hint for <toplevel_name> (a top-level name in the current module) when trying to verify some other term 'g'");
 
        ( noshort,
         "show_signatures",
-        Accumulated (SimpleStr "module name"),
+        Accumulated (SimpleStr "module_name"),
         "Show the checked signatures for all top-level symbols in the module");
 
        ( noshort,
@@ -772,8 +772,8 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "split_cases",
-        IntStr "positive integer",
-        "Partition VC of a match into groups of [n] cases");
+        IntStr "positive_integer",
+        "Partition VC of a match into groups of <positive_integer> cases");
 
        ( noshort,
         "timing",
@@ -825,12 +825,12 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "verify_module",
-        Accumulated (PostProcessed (pp_lowercase, (SimpleStr "module name"))),
+        Accumulated (PostProcessed (pp_lowercase, (SimpleStr "module_name"))),
         "Name of the module to verify");
 
        ( noshort,
         "__temp_no_proj",
-        Accumulated (SimpleStr "module name"),
+        Accumulated (SimpleStr "module_name"),
         "Don't generate projectors for this module");
 
        ( 'v',
@@ -856,17 +856,17 @@ let rec specs_with_types () : list<(char * string * opt_type * string)> =
 
        ( noshort,
         "z3rlimit",
-        IntStr "positive integer",
+        IntStr "positive_integer",
         "Set the Z3 per-query resource limit (default 5 units, taking roughtly 5s)");
 
        ( noshort,
         "z3rlimit_factor",
-        IntStr "positive integer",
+        IntStr "positive_integer",
         "Set the Z3 per-query resource limit multiplier. This is useful when, say, regenerating hints and you want to be more lax. (default 1)");
 
        ( noshort,
         "z3seed",
-        IntStr "positive integer",
+        IntStr "positive_integer",
         "Set the Z3 random seed (default 0)");
 
        ( noshort,
