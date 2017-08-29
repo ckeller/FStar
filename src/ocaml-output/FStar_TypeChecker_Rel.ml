@@ -8329,7 +8329,9 @@ let resolve_implicits':
                                 FStar_TypeChecker_Env.is_native_tactic =
                                   (uu___191_22687.FStar_TypeChecker_Env.is_native_tactic);
                                 FStar_TypeChecker_Env.identifier_info =
-                                  (uu___191_22687.FStar_TypeChecker_Env.identifier_info)
+                                  (uu___191_22687.FStar_TypeChecker_Env.identifier_info);
+                                FStar_TypeChecker_Env.tc_hooks =
+                                  (uu___191_22687.FStar_TypeChecker_Env.tc_hooks)
                               }
                             else env1 in
                           let uu____22689 =
@@ -8392,7 +8394,9 @@ let resolve_implicits':
                                  FStar_TypeChecker_Env.is_native_tactic =
                                    (uu___192_22697.FStar_TypeChecker_Env.is_native_tactic);
                                  FStar_TypeChecker_Env.identifier_info =
-                                   (uu___192_22697.FStar_TypeChecker_Env.identifier_info)
+                                   (uu___192_22697.FStar_TypeChecker_Env.identifier_info);
+                                 FStar_TypeChecker_Env.tc_hooks =
+                                   (uu___192_22697.FStar_TypeChecker_Env.tc_hooks)
                                }) tm1 in
                           match uu____22689 with
                           | (uu____22698,uu____22699,g1) ->

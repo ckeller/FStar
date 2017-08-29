@@ -3690,7 +3690,9 @@ let check_and_ascribe:
               FStar_TypeChecker_Env.is_native_tactic =
                 (uu___148_9819.FStar_TypeChecker_Env.is_native_tactic);
               FStar_TypeChecker_Env.identifier_info =
-                (uu___148_9819.FStar_TypeChecker_Env.identifier_info)
+                (uu___148_9819.FStar_TypeChecker_Env.identifier_info);
+              FStar_TypeChecker_Env.tc_hooks =
+                (uu___148_9819.FStar_TypeChecker_Env.tc_hooks)
             } in
           let uu____9821 = check env2 t1 t2 in
           match uu____9821 with

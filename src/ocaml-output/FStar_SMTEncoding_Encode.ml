@@ -1913,7 +1913,9 @@ and encode_term:
                               FStar_TypeChecker_Env.is_native_tactic =
                                 (uu___139_6516.FStar_TypeChecker_Env.is_native_tactic);
                               FStar_TypeChecker_Env.identifier_info =
-                                (uu___139_6516.FStar_TypeChecker_Env.identifier_info)
+                                (uu___139_6516.FStar_TypeChecker_Env.identifier_info);
+                              FStar_TypeChecker_Env.tc_hooks =
+                                (uu___139_6516.FStar_TypeChecker_Env.tc_hooks)
                             }) res in
                        (match uu____6507 with
                         | (pre_opt,res_t) ->
@@ -5060,7 +5062,9 @@ let encode_free_var:
                                      FStar_TypeChecker_Env.is_native_tactic =
                                        (uu___147_17246.FStar_TypeChecker_Env.is_native_tactic);
                                      FStar_TypeChecker_Env.identifier_info =
-                                       (uu___147_17246.FStar_TypeChecker_Env.identifier_info)
+                                       (uu___147_17246.FStar_TypeChecker_Env.identifier_info);
+                                     FStar_TypeChecker_Env.tc_hooks =
+                                       (uu___147_17246.FStar_TypeChecker_Env.tc_hooks)
                                    }) comp FStar_Syntax_Syntax.U_unknown in
                               FStar_Syntax_Syntax.mk_Total uu____17243
                             else comp in
@@ -5687,7 +5691,9 @@ let encode_top_level_let:
                        FStar_TypeChecker_Env.is_native_tactic =
                          (uu___150_18747.FStar_TypeChecker_Env.is_native_tactic);
                        FStar_TypeChecker_Env.identifier_info =
-                         (uu___150_18747.FStar_TypeChecker_Env.identifier_info)
+                         (uu___150_18747.FStar_TypeChecker_Env.identifier_info);
+                       FStar_TypeChecker_Env.tc_hooks =
+                         (uu___150_18747.FStar_TypeChecker_Env.tc_hooks)
                      }) c FStar_Syntax_Syntax.U_unknown
                 else FStar_Syntax_Util.comp_result c in
               let rec aux norm1 t_norm1 =
