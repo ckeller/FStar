@@ -4067,13 +4067,13 @@ let rec desugar_tycon:
                                if uu____12013
                                then
                                  let uu____12015 =
-                                   FStar_Range.string_of_range
-                                     se.FStar_Syntax_Syntax.sigrng in
-                                 let uu____12016 =
-                                   FStar_Syntax_Print.lid_to_string l in
-                                 FStar_Util.print2
-                                   "%s (Warning): Adding an implicit 'assume new' qualifier on %s\n"
-                                   uu____12015 uu____12016
+                                   let uu____12016 =
+                                     FStar_Syntax_Print.lid_to_string l in
+                                   FStar_Util.format1
+                                     "Adding an implicit 'assume new' qualifier on %s"
+                                     uu____12016 in
+                                 FStar_Errors.warn
+                                   se.FStar_Syntax_Syntax.sigrng uu____12015
                                else ());
                               FStar_Syntax_Syntax.Assumption
                               ::
