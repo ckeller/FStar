@@ -515,6 +515,9 @@ let js_reductionrule: FStar_Util.json -> FStar_TypeChecker_Normalize.step =
           FStar_Syntax_Syntax.Delta_constant
     | "iota" -> FStar_TypeChecker_Normalize.Iota
     | "zeta" -> FStar_TypeChecker_Normalize.Zeta
+    | "reify" -> FStar_TypeChecker_Normalize.Reify
+    | "pure-subterms" ->
+        FStar_TypeChecker_Normalize.PureSubtermsWithinComputations
     | uu____1867 -> js_fail "reduction rule" s
 type query' =
   | Exit
@@ -623,14 +626,16 @@ let interactive_protocol_vernum: Prims.int = Prims.parse_int "2"
 let interactive_protocol_features: Prims.string Prims.list =
   ["autocomplete";
   "compute";
+  "compute/reify";
+  "compute/pure-subterms";
   "describe-protocol";
   "describe-repl";
   "exit";
   "lookup";
   "lookup/documentation";
   "lookup/definition";
-  "pop";
   "peek";
+  "pop";
   "push";
   "search"]
 exception InvalidQuery of Prims.string
